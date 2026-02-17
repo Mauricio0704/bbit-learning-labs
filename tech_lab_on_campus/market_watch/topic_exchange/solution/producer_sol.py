@@ -12,7 +12,7 @@ class mqProducer(mqProducerInterface):
         con_params = pika.URLParameters(os.environ["AMQP_URL"])
         self.connection = pika.BlockingConnection(parameters = con_params)
         self.channel = self.connection.channel()
-        self.exchange = self.channel.exchange_declare(self.exchange_name)
+        self.exchange = self.channel.exchange_declare(self.exchange_name, exchange_type = "topic")
 
 
     def publishOrder(self, order : str) -> None:
