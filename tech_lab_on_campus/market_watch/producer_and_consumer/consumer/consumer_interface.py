@@ -20,6 +20,7 @@ class mqConsumerInterface:
         # Save parameters to class variables
 
         # Call setupRMQConnection
+
         pass
 
     def setupRMQConnection(self) -> None:
@@ -42,7 +43,6 @@ class mqConsumerInterface:
         # Acknowledge message
 
         #Print message (The message is contained in the body parameter variable)
-
         pass
 
     def startConsuming(self) -> None:
@@ -57,5 +57,4 @@ class mqConsumerInterface:
         # Close Channel
 
         # Close Connection
-        
         pass
